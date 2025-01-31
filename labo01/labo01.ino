@@ -53,9 +53,10 @@ void fade() {
 
 Serial.println("Variation – 2168637 »");
 for(int j = 0; j < 15; j++){
-  brightness = brightness - fadeness;
    analogWrite(LED_BUILTIN, brightness);
-  delay(136.53);
+    brightness = brightness - fadeness;
+
+  delay(136);
 }
 }
 
