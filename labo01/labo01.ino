@@ -1,6 +1,8 @@
 
 
 #define LED_BUILDIN 13
+int brightness = 255;
+int fadeness = 17;
 
 
 
@@ -23,8 +25,7 @@ void loop() {
 
   fade();
 
-
-
+  dark();
 
 }
 
@@ -44,13 +45,24 @@ for(int i = 0; i < 3; i++){
   delay(250);                      
   digitalWrite(LED_BUILTIN, LOW);   
   delay(250);   
-}}
+}
+
+ }
 
 void fade() {
-Serial.println("Éteint – 2142752 ");
 
+Serial.println("Variation – 2168637 »");
+for(int j = 0; j < 15; j++){
+  brightness = brightness - fadeness;
+   analogWrite(LED_BUILTIN, brightness);
+  delay(135);
+}
+}
 
-
+void dark(){
+  Serial.println("Éteint – 2142752");
+  digitalWrite(LED_BUILTIN, LOW);  
+delay(2000);
 }
 
 
