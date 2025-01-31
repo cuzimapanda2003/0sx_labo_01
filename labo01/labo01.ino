@@ -55,12 +55,12 @@ Serial.println("Variation – 2168637 »");
 for(int j = 0; j < 15; j++){
   brightness = brightness - fadeness;
    analogWrite(LED_BUILTIN, brightness);
-  delay(135);
+  delay(136.53);
 }
 }
 
 void dark(){
-  Serial.println("Éteint – 2142752");
+  Serial.println("Éteint – 2168637");
   digitalWrite(LED_BUILTIN, LOW);  
 delay(2000);
 }
